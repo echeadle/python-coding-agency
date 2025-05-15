@@ -1,6 +1,6 @@
 from crewai import Task
-from agents.planning_agent import PlanningAgent
-from agents.backend_dev_agent import BackendDevAgent
+from agency.agents.planning_agent import PlanningAgent
+from agency.agents.backend_dev_agent import BackendDevAgent
 
 planning_task = Task(
     description="Define project scope, architecture, and tech stack.",

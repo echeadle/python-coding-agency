@@ -1,9 +1,9 @@
 from langgraph.graph import StateGraph
-from agents.planning_agent import PlanningAgent
-from agents.backend_dev_agent import BackendDevAgent
-from agents.code_review_agent import ReviewAgent
-from agents.qa_agent import QATestAgent
-from agents.devops_agent import DevOpsAgent
+from agency.agents.planning_agent import PlanningAgent
+from agency.agents.backend_dev_agent import BackendDevAgent
+from agency.agents.code_review_agent import ReviewAgent
+from agency.agents.qa_agent import QATestAgent
+from agency.agents.devops_agent import DevOpsAgent
 
 graph = StateGraph()
 
