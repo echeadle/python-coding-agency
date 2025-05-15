@@ -1,0 +1,6 @@
+langchain
+langgraph
+crewai
+openai
+python-dotenv
+tqdm
