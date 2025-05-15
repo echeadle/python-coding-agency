@@ -6,13 +6,13 @@ FROM python:3.11-slim AS builder
 # 2. Download and run the uv installer script.
 # 3. Add uv to PATH (uv is installed to /root/.cargo/bin by default by the script).
 # 4. Clean up apt packages to keep the layer small.
+
 RUN apt-get update && \
     apt-get install -y curl && \
     curl -LsSf https://astral.sh/uv/install.sh | sh && \
     apt-get purge -y --auto-remove curl && \
     rm -rf /var/lib/apt/lists/*
-ENV PATH="/root/.cargo/bin:${PATH}"
-
+ENV PATH="/home/runner/.cargo/bin:${PATH}"
 WORKDIR /app
 
 # Copy only requirements.txt to leverage Docker cache effectively.
