@@ -23,12 +23,13 @@ COPY requirements.txt .
 # and install dependencies into it using uv add.
 # uv should auto-detect and use the .venv in the current directory.
 # --no-cache prevents caching of downloaded packages for this run.
-RUN uv venv .venv --seed --python $(which python3) && \
-    uv add -r requirements.txt --no-cache
+#RUN uv venv .venv --seed --python $(which python3) && \
+ #   uv add -r requirements.txt --no-cache
     # Note: This command will likely issue a warning if a pyproject.toml is not found,
     # stating that requirements will be added to the virtual environment but not to a pyproject.toml file.
     # This is expected in this context as we are using it primarily for installation here.
-
+RUN /root/.cargo/bin/uv venv .venv --seed --python python3 && \
+    /root/.cargo/bin/uv add -r requirements.txt --no-cache
 # Stage 2: Final application stage
 FROM python:3.11-slim
 
