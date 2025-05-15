@@ -26,9 +26,10 @@ jobs:
                   echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
             - name: 📦 Install dependencies with uv
-              run: uv pip install -r requirements.txt
+              run: |
+                  ~/.cargo/bin/uv pip install -r requirements.txt
 
-            - name: 🧪 Run Tests with Make
+            - name: 🧪 Run tests with Make
               run: make test
 
     docker-build:

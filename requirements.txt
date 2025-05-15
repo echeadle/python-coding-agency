@@ -4,3 +4,9 @@ crewai
 openai
 python-dotenv
 tqdm
+
+# Dev tools
+ruff
+pytest
+pytest-cov
+black
