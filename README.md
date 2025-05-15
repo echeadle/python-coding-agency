@@ -20,3 +20,17 @@ python main.py
 - LangGraph: Workflow orchestration
 - CrewAI: Agent collaboration
 - OpenAI: Code generation and LLM reasoning
+
+
+---
+
+## 🛠 Project Utilities
+
+### 🔄 Refactor to `src/` Layout
+
+This project includes a helper script to refactor flat Python projects into a clean `src/agency/` layout (recommended by [packaging.python.org](https://packaging.python.org/en/latest/tutorials/packaging-projects/)).
+
+📁 Script path:
+```bash
+scripts/refactor_to_src.sh
+
