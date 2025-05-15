@@ -1,0 +1,14 @@
+backend_dev:
+    language: Python
+    framework: FastAPI
+    db: PostgreSQL
+
+qa:
+    tools:
+        - pytest
+        - coverage
+
+devops:
+    tools:
+        - Docker
+        - GitHub Actions
